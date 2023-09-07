@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>List Of Experiments</title>
+	<link href="/src/css/skdslider.css" rel="stylesheet" />
+	<!-- <link rel="stylesheet" href="src\css\bootstrap.css" /> -->
+	<link rel="stylesheet" href="/src/css/subject_page.css" />
+	<link rel="stylesheet" href="/src/css/subject_custom.css" />
+	<!-- <link rel="stylesheet" href="/src/css/subject_util.css" /> -->
+	<link
+		href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i,900,900i|Source+Sans+Pro:400,400i,600,600i,700,700i,900,900i"
+		rel="stylesheet" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<link rel="icon" type="image/png" sizes="16x16" href="/src/images/logoresized.jpg " />
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css"
+		href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" />
+
+		<link rel="stylesheet" href="src\css\navbar.css">
+</head>
+
+<body>
+		<div class="container-fluid d-flex justify-content-around">
+			<!-- Logo -->
+			
+			<img src="..\src\images\New_Logo.png" class="img-fluid h-25 img2" alt="..." style="max-height: 180px; display:flex; justify-content:center">
+			<img src="..\src\images\svkmlogo.jpg" class="img-fluid h-25 img1" alt="...">
+			<img src="..\src\images\sbmplogo.jpg" class="img-fluid h-25 img3" alt="...">
+		</div>
+		<div style="float: right; padding-right: 40px;">
+			<a class="nav-link" href="/logout" style="float: right; font-size: 25px;">  <!--/logout -->
+				Logout &nbsp;<i class="fa fa-sign-out" aria-hidden="true"></i>
+			  </a>
+		</div>
+			  <br><br><br>
+			  <div>
+			<h1>Data Structures Experiments</h1>
+		</div>
+	<div class="container" id="experimentContainer">
+		
+	</div>
+	
+</body>
+<script>
+	$(document).ready(function() {			
+		$.ajax({
+			type : "GET",
+			url : '/list_of_exps',
+			dataType : 'json',
+
+			success: function(result) {     
+				// console.log(result);
+				var experimentContainer = document.getElementById('experimentContainer');
+
+				for (var i = 0; i < result.length; i++) {
+					var experimentDiv = document.createElement('div');
+					experimentDiv.className = 'experiment';
+
+					experimentDiv.setAttribute('onclick', 'editExp(' + result[i].exp_no + ');');
+
+					var experimentHeading = document.createElement('h2');
+					experimentHeading.textContent = result[i].title;
+
+					experimentDiv.appendChild(experimentHeading);
+					experimentContainer.appendChild(experimentDiv);
+				}       
+			},
+			
+			error : function(err){
+				console.log("Get List of Exps Error",err);
+			}
+		});
+	}); 
+
+	function editExp(expNo) {
+		document.cookie = "expNo=" + expNo;
+		window.location = "adminform.html";
+	}
+	</script>
+<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f2f2f2;
+		}
+
+		h1 {
+			color: #008080;
+			text-align: center;
+			margin-top: 50px;
+		}
+
+		.container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			max-width: 800px;
+			margin: 0 auto;
+			padding: 50px 0;
+		}
+
+		.experiment {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			background-color: #fff;
+			padding: 20px;
+			margin-bottom: 30px;
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+			transition: transform 0.3s ease-in-out;
+			cursor: pointer;
+			max-width: 400px;
+			width: 100%;
+			box-sizing: border-box;
+		}
+
+		.experiment:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+		}
+
+		.experiment img {
+			max-width: 100%;
+			margin-bottom: 20px;
+		}
+
+		.experiment h2 {
+			color: #008080;
+			font-size: 24px;
+			font-weight: bold;
+			text-align: center;
+			margin: 0 0 20px;
+		}
+
+		.experiment p {
+			color: #333;
+			font-size: 16px;
+			text-align: center;
+			line-height: 1.5;
+			margin: 0;
+		}
+	</style>
+</html>

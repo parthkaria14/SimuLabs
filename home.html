@@ -1,0 +1,252 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <title>SimuLabs</title>
+    <link rel="stylesheet" href="src\css\home_styles.css">
+    <link rel="stylesheet" href="src\css\navbar.css">
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" /> -->
+    <link rel="icon" type="image/x-icon" href="src/images/logoresized.jpg">
+
+    <style>
+        .carousel-inner img {
+            width: 100%;
+            height: 75%;
+          }
+      </style>
+  </head>
+
+  <body>
+     <!-- Navbar -->
+     <div class="container-fluid d-flex justify-content-around">
+        <!-- Logo -->
+        
+        <img src="src\images\logo.jpeg" class="img-fluid h-25 img2" alt="..." style="max-height: 180px; display:flex; justify-content:center">
+        <img src="src\images\svkmlogo.jpg" class="img-fluid h-25 img1" alt="...">
+        <img src="src\images\sbmplogo.jpg" class="img-fluid h-25 img3" alt="...">
+      </div>
+      <nav class="navbar navbar-expand-lg" >
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon">
+            <svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg" width="30" height="30">
+              <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/>
+            </svg>
+          </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="home.html">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#aboutus">Vision Mission</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#programmes">Programmes</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="aboutdevs.html">About Developers</a>
+            </li>
+            &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; 
+            <li class="nav-item active ">
+              <a class="nav-link" href="/logout">  <!--/logout -->
+                Logout &nbsp;<i class="fa fa-sign-out" aria-hidden="true"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <br>
+      <br>
+      
+    <div class="container">
+      
+
+          <div id="demo" class="carousel slide" data-ride="carousel">
+
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+              <li data-target="#demo" data-slide-to="0" class="active"></li>
+              <li data-target="#demo" data-slide-to="1"></li>
+              <li data-target="#demo" data-slide-to="2"></li>
+            </ul>
+            
+            <!-- The slideshow -->
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="src/images/sbmp1.jpg" alt="Image1" width="1100" height="470">
+              </div>
+              <div class="carousel-item">
+                <img src="src/images/sbmp2.jpg" alt="Image2" width="1100" height="470">
+              </div>
+              <div class="carousel-item">
+                <img src="src/images/sbmp5.jpg" alt="Image3" width="1100" height="470">
+              </div>
+            </div>
+            
+            <!-- Left and right controls -->
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </a>
+          </div>
+          
+
+        <!-- Cards -->
+
+        <br>
+        <br>
+        <div class="card-deck" id="programmes">
+         <br>
+         <br>
+          <div class="card">
+            <a href="courses/subject_page.html">
+            <img src="src/images/IT.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 style="text-align: center;color: black";class="card-title">Information <br>  Technology</h5>
+              
+            </div>
+          </a>
+          </div>
+          
+          <div class="card">
+            <a href="...">
+            <img src="src/images/mech.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 style="text-align: center;color: black" class="card-title">Mechanical <br> Engineering</h5>
+              
+            </div>
+          </a>
+          </div>
+          <div class="card">
+            <a href="...">
+            <img src="src/images/civil.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 style="text-align: center;color: black" class="card-title">Civil <br> Engineering</h5>
+              
+            </div>
+        </a>
+
+          </div>
+        </div>
+
+        <br>
+        <br>
+        <div class="card-deck">
+         
+          <div class="card">
+            <a href="...">
+            <img src="src/images/elec.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 style="text-align: center;color: black";class="card-title">Electrical <br> Engineering</h5>
+              
+            </div>
+          </a>
+          </div>
+          
+          <div class="card">
+            <a href="...">
+            <img src="src/images/chem.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 style="text-align: center;color: black" class="card-title">Chemical <br> Engineering</h5>
+              
+            </div>
+        </a>
+
+          </div>
+          <div class="card">
+            <a href="...">
+            <img src="src/images/plastic.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 style="text-align: center;color: black" class="card-title">Plastic <br> Engineering</h5>
+              
+            </div>
+        </a>
+
+          </div>
+        </div>
+
+        
+      <!-- About us -->
+      <section class="about-us">
+        
+        <div id="aboutus" class="about">
+          <img src="src\images\sbmp4.jpg" class="pic">
+          <div class="text">
+            <h5>Shri Bhagubhai Mafatlal Polytechnic</h5>
+            <p>
+              <h3 style="text-align: center;">Vision </h3>
+              SBM Polytechnic aspires to be the lead institute in providing need based technical education.
+              <h3  style="text-align: center;">Mission</h3>
+              1.To provide state-of-the-art infrastructure and latest equipments for providing a stimulating learning environment.
+              <br>
+              2.To prepare students to meet the dynamic needs of the industry by periodic reviewing and upgradation of curriculum through an interactive process with industry.
+              <br>
+              3.To inculcate a spirit of excellence in terms of academic performance, research and innovation in faculty by providing appropriate support and incentive systems.
+              <br>
+              4.To promote and support Co-Curricular, extra-curricular activities and industry interaction to make students socially sensitive and employable.
+            </p>
+            <div class="data">
+              <a href="https://sbmp.ac.in/" class="know">Know More..</a>
+            </div>
+          </div>
+        </div>
+      </section>
+<br><br>
+      <section class="about-us2">
+        
+        <div id="aboutus2" class="about2">
+          
+          <div class="text2">
+            <b><hr></b>  
+            <p>
+              S.B.M.P. has diversified its conventional programmes initiated in 1963 into variety of disciplines. The Polytechnic is a grant-in-aid autonomous institution affiliated to the Maharashtra State Board of Technical Education. The Polytechnic is being managed by the duly constituted Managing Council. Our glorious past and trail blazing presence makes S.B.M.P. a leading polytechnic which sets its own benchmark.
+              </p>
+
+              <p>We impart value-based quality education ensuring a fruitful and happy outcome of their academic pursuits. The institute revises and designs its own curriculum. The process of developing curriculum involves in consultation with the stakeholders like industry experts, academicians, alumni, parents and students. Each revision of the curriculum is benchmarked by industry. Industrial training is the part of curriculum, with this, all the students get exposure to the latest trends in technology. Students from various programmes are involved in the multidisciplinary projects such as Quad Bike, flying Drones and many more industry sponsored projects.</p>
+          </div>
+          <img src="src\images\lab.jpg" class="pic2">
+        </div>
+      </section>
+      <br><br><br>
+      <b><hr></b>
+<p align="center">
+  <em>Where the mind is &nbsp;without fear and the head is held high<br>
+  Where knowledge is free<br>
+	Where the world has not been broken up into fragments<br>
+	By narrow domestic walls<br>
+	Where words come out from the depth of truth<br>
+	Where tireless striving stretches its arms towards perfection<br>
+	Where the clear stream of reason has not lost its way<br>
+	Into the dreary desert sand of dead habit<br>
+	Where the mind is led forward by thee<br>
+	Into ever-widening thought and action<br>
+	Into &nbsp;that heaven of freedom, my Father, let my country awake</em> 
+    </p>
+
+      
+      <!-- footer -->
+      <footer>
+        <div class=" footer">
+        <p style="color: rgb(1, 3, 5); "> SimuLabs</p>
+      </div>
+      </footer>
+      
+      
+
+  </body>
+ 
+      
+</html>

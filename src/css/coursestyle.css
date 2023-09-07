@@ -1,0 +1,368 @@
+html {
+  overflow-y: auto;
+}
+
+.vlabs-page {
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.vlabs-header {
+  border-bottom: 8px solid #021b99;
+  font-family: "Raleway", sans-serif;
+}
+
+.vlabs-page-main {
+  font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
+}
+
+.vlabs-lab-name {
+  font-size: 1.7rem;
+}
+
+.vlabs-footer {
+  font-size: 14px;
+  background: rgb(17, 17, 17);
+  font-family: "Raleway", sans-serif;
+}
+
+.vlabs-footer-sect-name {
+  border-width: 0.15rem;
+  border-style: solid;
+  border-image: linear-gradient(to right, #3ec1d5 20%, #555 0%) 0% 0% 100% 0%;
+}
+
+.vlabs-lab-name {
+  color: #2c99ce;
+}
+
+.vlabs-page-content {
+  font-size: 1.2rem;
+  overflow-y: hidden;
+  font-family: "Raleway", sans-serif;
+}
+
+.nav-menu a,
+.simulation-header .dropdown .nav-menu a {
+  color:  #023047;
+}
+
+.nav-menu .tasks a,
+.simulation-header .dropdown .nav-menu .tasks a {
+  color: #5c5c5c;
+}
+
+.nav-menu a.current-item,
+.simulation-header .dropdown .nav-menu a.current-item {
+  color: #ff6600;
+}
+
+.nav-menu .tasks,
+.simulation-header .dropdown .nav-menu .tasks {
+  font-size: 1rem;
+}
+
+.nav-menu,
+.simulation-header .dropdown .nav-menu {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.nav-menu-body {
+  justify-content: center;
+}
+
+.sidebar .nav-menu-body {
+  justify-content: start;
+}
+
+.sidebar {
+  /* border-right: 2px dotted #89a7c4; */
+  border-right: thin solid #e8e8e8;
+  overflow: hidden;
+  box-sizing: content-box;
+}
+
+.popupmenu .vlabs-logo {
+  height: 2.5rem;
+}
+
+@media (max-width: 991px) {
+  .sidebar {
+    max-height: 6000px;
+    transition: max-height 1s ease-in;
+    flex-wrap: nowrap;
+    overflow-y: auto;
+  }
+  .vlabs-logo {
+    height: 3rem;
+  }
+
+  .simulation-header {
+    display: none !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .vlabs-hidden {
+    display: none !important;
+  }
+  #toggle-menu-float-button {
+    display: none;
+  }
+}
+
+.vlabs-header a {
+  margin: 0 1rem;
+  padding: 0.5rem 1rem;
+  color: #2c98cd;
+  font-size: 1.2rem;
+}
+
+.vlabs-header #headerNavbar a:hover {
+  background: #77bb41;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.vlabs-header #headerNavbar a {
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.breadcrumbs,
+.breadcrumbs a,
+.breadcrumbs span {
+  font-size: 1.6rem;
+  color: #337ab7;
+}
+
+.page-name {
+  color: #337ab7;
+}
+
+/*pre-test and post-test page styling fix*/
+
+.answers {
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.question {
+  font-weight: 900;
+}
+
+/* feedback */
+#feedback-btn {
+  color: #2c99ce;
+  border-color: #2c99ce;
+}
+
+/* to override markdown styling */
+.markdown-body {
+  font-family: "Raleway", sans-serif;
+  color: #000000;
+  text-align: justify;
+}
+
+/* to fix the  extended lines*/
+.markdown-body table tr {
+  border-top: 0;
+}
+
+h1,
+h2,
+h3 {
+    color: #ff6600;
+    font-weight: bold;
+}
+
+h2 {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+  color: #333333;
+  padding-top: 1rem;
+  text-decoration: underline;
+}
+
+/* for ds experiments - video iframes */
+iframe {
+  width: 100%;
+  height: calc(100vw / 3);
+}
+
+.simulation-container {
+  padding: 0px;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.responsive-iframe {
+  flex: 1;
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  display: none;
+  margin-left: 20px;
+  color: #337ab7;
+  text-decoration: underline;
+  text-align: right;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+/* .active,
+.accordion:hover {
+} */
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  display: none;
+  background-color: #eee;
+  color: #444;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+/* Customize the label (the container) */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* .form-check input[type="checkbox"] {
+  width: 1rem;
+  height: 1rem;
+  margin: 5px 10px 0px 0px;
+} */
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+nav {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 120px;
+  
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff; 
+  z-index: 999; 
+}
+
+
+/* cards*/
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: auto;
+  margin: 10px;
+}
+
+.card-title {
+  color: #000000;
+  vertical-align: middle;
+  text-align: center;
+}
+.card-img, .card-img-top {
+
+max-height: 70;
+min-height: 70;
+max-width: 100;
+min-width: 100;  
+}
+
+
+/* Dropdown Button */
+.dropbtn {
+vertical-align: middle;
+text-align: center;
+background-color: white;
+color: black;
+padding: 4px;
+font-size: 20px;
+border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+
+position: relative;
+display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #f1f1f1;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+content: '\25BC'; /* unicode value for down arrow */
+display: inline-block;
+margin-left: 5px;
+background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;
+content: '\25BC'; /* unicode value for down arrow */
+display: inline-block;
+margin-left: 5px;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: white;
+content: '\25BC'; /* unicode value for down arrow */
+display: inline-block;
+margin-left: 5px;}
+

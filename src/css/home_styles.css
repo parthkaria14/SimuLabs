@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
+
+        
+          /* Carousel */
+           /* Make the image fully responsive */
+         
+            .carousel-inner img {
+              width: 100%;
+              height: 100%;
+            }
+
+
+          /* Courses */
+          .about-us{
+            
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+             font-family: 'Poppins', sans-serif;
+          }
+          .courses{
+            height: 30vh;
+            width: 100%;
+            padding: 90px 0;
+            background: #fff;
+            
+          }
+          
+          
+          .course_names{
+            width: 1130px;
+            max-width: 85%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+          }
+
+          /* cards*/
+          .card-title {
+            
+            vertical-align: middle;
+            text-align: center;
+        }
+        .card-img, .card-img-top {
+          
+          max-height: 195.75px;
+          
+          min-height: 195.75px;
+      }
+         
+      hr {
+        position: relative;
+        top: 20px;
+        border: none;
+        height: 0.5px;
+        background: black;
+        margin-bottom: 50px;
+    }
+
+        
+
+
+
+           /* About us */
+ 
+ *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+.about-us{
+ 
+  height: 70vh; 
+  width: 100%; 
+  max-height: 70vh;
+  /* min-height: 100%; */
+  padding: 90px 0;
+  background: white; 
+}
+.pic{
+  height: 550px;
+  width:  500px;
+  margin:5px;
+  padding-right: 20px;
+}
+.about{
+  width: 1130px;
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.text{
+  width: 540px;
+}
+.text h2{
+  font-size: 90px;
+  font-weight: 600;
+  margin-bottom: 10px;
+
+}
+.text h5{
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+span{
+  color: #4070f4;
+}
+.text p{
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 1px;
+}
+.data{
+  margin-top: 30px;
+}
+.know{
+  font-size: 18px;
+  background: #4070f4;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  padding: 8px 25px;
+  border-radius: 6px;
+  transition: 0.5s;
+}
+.know:hover{
+  background: #000;
+  border: 1px solid #4070f4;
+} 
+
+.about-us {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+
+.pic {
+  max-width: 100%;
+  height: auto;
+}
+
+.text {
+  margin-left: 20px;
+}
+
+h5 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin: 20px 0;
+}
+
+.data {
+  margin-top: 20px;
+}
+
+.know {
+  font-size: 1.2rem;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* ABOUT US2 */
+.about-us2{
+ 
+  height: 55vh; 
+  width: 100%; 
+ max-height: 55vh;
+ min-height: 100%;
+ padding: 90px 0;
+
+  background: white; 
+}
+.pic2{
+ height: 550px;
+ width:  500px;
+ margin:5px;
+ padding-right: 20px;
+}
+.about2{
+ width: 1130px;
+ max-width: 100%;
+ margin: 0 auto;
+ display: flex;
+ align-items: center;
+ justify-content: space-around;
+}
+.text2{
+ width: 540px;
+}
+.text2 h2{
+ font-size: 90px;
+ font-weight: 600;
+ margin-bottom: 10px;
+
+}
+.text2 h5{
+ font-size: 22px;
+ font-weight: 500;
+ margin-bottom: 20px;
+}
+span2{
+ color: #4070f4;
+}
+.text2 p{
+ font-size: 18px;
+ line-height: 25px;
+ letter-spacing: 1px;
+}
+
+
+.about-us2 {
+ display: flex;
+ flex-wrap: wrap;
+}
+
+.about2 {
+ display: flex;
+ flex-wrap: wrap;
+ margin: 20px;
+}
+
+.pic2 {
+ max-width: 100%;
+ height: auto;
+}
+
+.text2 {
+ margin-left: 20px;
+}
+
+p {
+ font-size: 1.2rem;
+ line-height: 1.5;
+ margin: 20px 0;
+}
+
+
+
+
+
+
+/* media queries for responsive design */
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+  }
+  .about2 {
+    flex-direction: column;
+  }
+
+  .text {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+}
+          /* footer */
+          .footer {
+            background-color: #f2f2f2;
+            padding: 20px;
+          }
+          
+         
+          .footer p {
+            margin: 0;
+            text-align: center;
+            font-size: 14px;
+            color: #fffdfd;
+            
+          }
+          @media only screen and (max-width: 600px) {
+  .footer {
+    padding: 10px;
+  }
+  
+  .footer p {
+    font-size: 12px;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+} 

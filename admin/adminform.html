@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Edit Page</title>
+
+    <link href="/src/css/skdslider.css" rel="stylesheet" />
+    <!-- <link rel="stylesheet" href="src\css\bootstrap.css" /> -->
+    <link rel="stylesheet" href="/src/css/subject_page.css" />
+    <link rel="stylesheet" href="/src/css/subject_custom.css" />
+    <!-- <link rel="stylesheet" href="/src/css/subject_util.css" /> -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i,900,900i|Source+Sans+Pro:400,400i,600,600i,700,700i,900,900i"
+        rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/src/images/logoresized.jpg " />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="src\css\navbar.css">
+</head>
+
+<body>
+    <div class="container-fluid d-flex justify-content-around">
+		<!-- Logo -->
+		
+		<img src="..\src\images\New_Logo.png" class="img-fluid h-25 img2" alt="..." style="max-height: 180px; display:flex; justify-content:center">
+		<img src="..\src\images\svkmlogo.jpg" class="img-fluid h-25 img1" alt="...">
+		<img src="..\src\images\sbmplogo.jpg" class="img-fluid h-25 img3" alt="...">
+	  </div>
+      <div class="container">
+      <a class="nav-link" href="/logout" style="float: right; font-size: 25px;">  <!--/logout -->
+        Logout &nbsp;<i class="fa fa-sign-out" aria-hidden="true"></i>
+      </a>
+    </div>
+      <br>
+    <h1>Edit Page</h1>
+    <form action="/updateExp" method="POST">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" required> <br> <br>
+
+        <label for="exp_no">Experiment No.:</label>
+        <textarea id="exp_no" name="exp_no" rows="1" readonly required></textarea> <br><br>
+
+        <label for="aim">Aim:</label>
+        <textarea id="aim" name="aim" rows="10" required></textarea> <br> <br>
+
+        <label for="theory">Theory:</label>
+        <textarea id="theory" name="theory" rows="10" required></textarea><br> <br>
+
+        <button type="submit">Save Changes</button>
+    </form>
+    
+</body>
+<script>
+    function getCookieValue(cookieName) {
+        var name = cookieName + "=";
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var cookieArray = decodedCookie.split(';');
+
+        for (var i = 0; i < cookieArray.length; i++) {
+            var cookie = cookieArray[i].trim();
+            if (cookie.indexOf(name) === 0) {
+                return cookie.substring(name.length, cookie.length);
+            }
+        }
+        return "";
+    }
+
+    $(document).ready(function() {		
+        var expNoCookie = getCookieValue("expNo");
+        console.log(expNoCookie);
+
+		$.ajax({
+			type : "GET",
+			url : '/editExp?expNo='+expNoCookie,
+			dataType : 'json',
+
+			success: function(result) {    
+                console.log(result); 
+                var titleText = document.getElementById("title");
+                titleText.value = result[0].title;
+
+                var expnoText = document.getElementById("exp_no");
+                expnoText.value = result[0].exp_no;
+
+                var aimText = document.getElementById("aim");
+                aimText.value = result[0].aim;
+
+                var theoryText = document.getElementById("theory");
+                theoryText.value = result[0].theory;
+			},
+			
+			error : function(err){
+				console.log("Get Exp Data Error",err);
+			}
+		});
+	});
+</script>
+<style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            font-size: small;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px #ccc;
+            margin: 50px auto;
+            max-width: 600px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        textarea {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+
+        button[type="submit"] {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #3e8e41;
+        }
+    </style>
+</html>

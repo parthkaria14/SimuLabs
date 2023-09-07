@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Welcome to SimuLabs">
+    <meta name="author" content="SimuLabs">
+
+    <title>Welcome to SimuLabs</title>
+    <link rel="shortcut icon" href="/src/images/logoresized.jpg">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;family=Raleway&amp;display=swap"
+        rel="stylesheet">
+
+    <link href="/src/css/coursestyle.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+        integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
+        crossorigin="anonymous"></script>
+    <script src="../exp_details.js"></script>
+</head>
+
+<body class="p-0 container-fluid vlabs-page d-flex flex-column justify-content-between">
+
+    <noscript class="gtm">
+        <iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-W59SWTR"
+            style="display: none; visibility: hidden;" width="0">
+        </iframe>
+    </noscript>
+
+    <header class="vlabs-header sticky-top bg-white">
+        <nav class="p-0 navbar navbar-light d-flex align-items-stretch">
+
+
+            <div class="d-flex justify-content-center">
+                <a href="../../../../home.html" class="navbar-brand">
+                    <img src="/src/images/New_Logo.png" alt="vlabs logo" class="vlabs-logo"
+                    style="max-width: auto ; max-height: 145px; padding-bottom: 10px;">
+                </a>
+            </div>
+
+            <div id="headerNavbar" class="d-none border-top flex-grow-1 d-lg-flex align-items-center">
+                <ul class="navbar-nav ml-auto text-center d-flex flex-md-row">
+                    <li class="nav-item px-2 m-1">
+                        <a href="../../../../home.html">Home</a>
+                    </li>
+                    <li class="nav-item px-2 m-1">
+                        <a href="../../../../home.html#programmes">Programmes</a>
+                    </li>
+                    <li class="nav-item px-2 m-1">
+                        <a href="../../../../home.html#aboutus">About Us</a>
+                    </li>
+                    <li class="nav-item px-2 m-1">
+                        <a href="/logout">  <!--/logout -->
+                          Logout &nbsp;<i class="fa fa-sign-out" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container-fluid flex-fill d-flex flex-column vlabs-page-main">
+        <div class="row py-4 px-4 breadcrumbs"><a href="/courses/subject_page.html" class="sidebar-a">
+                Information Technology
+            </a>
+        </div>
+        <div class="row flex-grow-1 d-flex flex-nowrap">
+
+            <div class="nav flex-column sidebar nav-menu flex-shrink-0 px-lg-4 align-items-center align-items-lg-start hidden d-none d-lg-flex"
+                id="menu">
+                <div class="d-flex nav-menu-body">
+                    <a id="aim" href="javascript:aim(8);" class="p-2">
+                        Aim
+                    </a>
+                </div>
+                <div class="d-flex nav-menu-body">
+                    <a id="theory" href="javascript:theory(8);" class="p-2">
+                        Theory
+                    </a>
+                </div>
+                <div class="d-flex nav-menu-body">
+                    <a id="procedure" href="Procedure_bs.html" class="p-2">
+                        Procedure
+                    </a>
+                </div>
+                <div class="d-flex nav-menu-body">
+                    <a id="test" href="Test_bs.html" class="p-2">
+                        Test
+                    </a>
+                </div>
+                <div class="d-flex nav-menu-body">
+                    <a id="simulation" href="Simulation_bs.html" class="p-2 current-item">
+                        Simulation
+                    </a>
+                </div>
+                <div class="d-flex nav-menu-body">
+                    <a id="references" href="Reference_bs.html" class="p-2">
+                        References
+                    </a>
+                </div>
+            </div>
+            <div id="page_content" class="vlabs-page-content px-5 pb-4 flex-grow-1 markdown-body">
+                <div class="container">
+                    <div class="heading-container">
+                        <h2>Binary Search Simulation</h2>
+                    </div>
+
+                    <div class="algorithm-container">
+                        <p>Algorithm:</p>
+                        <pre>
+function binarySearch(arr, x) {
+let start = 0, end = arr.length - 1;
+
+while (start <= end) {
+    let mid = Math.floor((start + end) / 2);
+
+    if (arr[mid] === x) {
+    return mid;
+    } else if (arr[mid] < x) {
+    start = mid + 1;
+    } else {
+    end = mid - 1;
+    }
+}
+
+return -1;
+}
+                    </pre>
+                    </div>
+                    <div class="form">
+                        <label for="array">Enter array:</label>
+                        <input type="text" id="array" name="array" placeholder="Enter array...">
+                        <button onclick="sortArray()">Sort</button>
+                        <label for="target">Enter target:</label>
+                        <input type="text" id="target" name="target" placeholder="Enter target...">
+                        <button onclick="search()">Search</button>
+                        <p id="result"></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    </div>
+    <footer class="text-light pt-2 vlabs-footer d-flex flex-column">
+    </footer>
+    <style>
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+        }
+
+        .container .algorithm-container .form {
+            border: 1px solid black;
+            padding: 10px;
+            margin-right: 10px;
+        }
+
+        /* .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        } */
+        .heading-container {
+            text-align: center;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .algorithm-container {
+            width: 450px;
+            height: 530px;
+            border: 2px solid #333;
+            padding: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 1.5;
+            margin-right: 50px;
+            text-align: center;
+            margin-top: 100px;
+            margin-left: 10px;
+        }
+
+        .algorithm-container p {
+            font-weight: bold;
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 100px;
+            border: 2px solid #333;
+            padding: 20px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: contents;
+
+        }
+
+        .form label {
+            width: 120px;
+            font-weight: bold;
+        }
+
+        .form input[type="text"] {
+            width: 200px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+            margin-bottom: 5px;
+        }
+
+        button:hover {
+            background-color: #fff;
+            color: #333;
+            border: 2px solid #333;
+        }
+
+        #result {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+       function binarySearch(arr, x) {
+  let start = 0,
+    end = arr.length - 1;
+
+  while (start <= end) {
+    let mid = Math.floor((start + end) / 2);
+
+    if (arr[mid] === x) {
+      return mid;
+    } else if (arr[mid] < x) {
+      start = mid + 1;
+    } else {
+      end = mid - 1;
+    }
+  }
+
+  return -1;
+}
+
+// function sortArray() {
+//   const arrayInput = document.getElementById("array");
+//   const array = arrayInput.value.split(",");
+//   const sortedArray = array.slice().sort((a, b) => a - b);
+//   arrayInput.value = sortedArray.join(",");
+// }
+
+// function search() {
+//   const array = document.getElementById("array").value.split(",");
+//   const target = document.getElementById("target").value;
+
+//   const sortedArray = array.slice().sort((a, b) => a - b);
+//   const result = binarySearch(sortedArray, target);
+
+//   const resultElement = document.getElementById("result");
+
+//   if (result === -1) {
+//     resultElement.textContent = `Target ${target} not found in the array.`;
+//   } else {
+//     resultElement.textContent = `Target ${target} found at index ${result}.`;
+//   }
+// }
+function binarySearch(array, target) {
+  let left = 0;
+  let right = array.length - 1;
+
+  while (left <= right) {
+    let mid = Math.floor((left + right) / 2);
+
+    if (array[mid] === target) {
+      return mid;
+    }
+
+    if (array[mid] < target) {
+      left = mid + 1;
+    } else {
+      right = mid - 1;
+    }
+  }
+
+  return -1;
+}
+
+function sortArray() {
+  const arrayInput = document.getElementById("array");
+  const array = arrayInput.value.split(",");
+  const sortedArray = array.map(Number).sort((a, b) => a - b);
+  arrayInput.value = sortedArray.join(",");
+}
+
+function search() {
+  const array = document.getElementById("array").value.split(",");
+  const target = document.getElementById("target").value;
+
+  const sortedArray = array.map(Number).sort((a, b) => a - b);
+  const result = binarySearch(sortedArray, Number(target));
+
+  const resultElement = document.getElementById("result");
+
+  if (result === -1) {
+    resultElement.textContent = `Target ${target} not found in the array.`;
+  } else {
+    resultElement.textContent = `Target ${target} found at index ${result}.`;
+  }
+}
+
+
+    </script>
+
+</body>
+
+</html>

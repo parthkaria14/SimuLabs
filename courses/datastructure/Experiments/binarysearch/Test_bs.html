@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Welcome to SimuLabs">
+    <meta name="author" content="SimuLabs">
+
+    <title>Welcome to SimuLabs</title>
+    <link rel="shortcut icon" href="/src/images/logoresized.jpg">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;family=Raleway&amp;display=swap"
+        rel="stylesheet">
+
+    <link href="/src/css/coursestyle.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+        integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
+        crossorigin="anonymous"></script>
+    <script src="../exp_details.js"></script>
+</head>
+
+<body class="p-0 container-fluid vlabs-page d-flex flex-column justify-content-between">
+
+    <noscript class="gtm">
+        <iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-W59SWTR"
+            style="display: none; visibility: hidden;" width="0">
+        </iframe>
+    </noscript>
+
+    <header class="vlabs-header sticky-top bg-white">
+        <nav class="p-0 navbar navbar-light d-flex align-items-stretch">
+
+
+            <div class="d-flex justify-content-center">
+                <a href="../../../../home.html" class="navbar-brand">
+                    <img src="/src/images/New_Logo.png" alt="vlabs logo" class="vlabs-logo"
+                        style="max-width: auto ; max-height: 145px; padding-bottom: 10px;">
+                </a>
+            </div>
+
+            <div id="headerNavbar" class="d-none border-top flex-grow-1 d-lg-flex align-items-center">
+                <ul class="navbar-nav ml-auto text-center d-flex flex-md-row">
+                    <li class="nav-item px-2 m-1">
+                        <a href="../../../../home.html">Home</a>
+                    </li>
+                    <li class="nav-item px-2 m-1">
+                        <a href="../../../../home.html#programmes">Programmes</a>
+                    </li>
+                    <li class="nav-item px-2 m-1">
+                        <a href="../../../../home.html#aboutus">About Us</a>
+                    </li>
+                    <li class="nav-item px-2 m-1">
+                        <a href="/logout"> <!--/logout -->
+                            Logout &nbsp;<i class="fa fa-sign-out" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container-fluid flex-fill d-flex flex-column vlabs-page-main">
+        <div class="row py-4 px-4 breadcrumbs"><a href="/courses/subject_page.html" class="sidebar-a">
+                Information Technology
+            </a>
+        </div>
+        <div class="row flex-grow-1 d-flex flex-nowrap">
+
+            <div class="nav flex-column sidebar nav-menu flex-shrink-0 px-lg-4 align-items-center align-items-lg-start hidden d-none d-lg-flex"
+                id="menu">
+                <div class="d-flex nav-menu-body">
+                    <a id="aim" href="javascript:aim(8);" class="p-2">
+                        Aim
+                    </a>
+                </div>
+                <div class="d-flex nav-menu-body">
+                    <a id="theory" href="javascript:theory(8);" class="p-2">
+                        Theory
+                    </a>
+                </div>
+                <div class="d-flex nav-menu-body">
+                    <a id="procedure" href="Procedure_bs.html" class="p-2">
+                        Procedure
+                    </a>
+                </div>
+                <div class="d-flex nav-menu-body">
+                    <a id="test" href="Test_bs.html" class="p-2 current-item">
+                        Test
+                    </a>
+                </div>
+                <div class="d-flex nav-menu-body">
+                    <a id="simulation" href="Simulation_bs.html" class="p-2">
+                        Simulation
+                    </a>
+                </div>
+                <div class="d-flex nav-menu-body">
+                    <a id="references" href="Reference_bs.html" class="p-2">
+                        References
+                    </a>
+                </div>
+            </div>
+            <div id="page_content" class="vlabs-page-content px-5 pb-4 flex-grow-1 markdown-body">
+                <h1>Binary Search MCQs</h1>
+                <form>
+                    <h3>Question 1:</h3>
+                    <p>What is the time complexity of binary search in a sorted array of size n?</p>
+                    <input type="radio" name="q1" value="a"> A. O(1)<br>
+                    <input type="radio" name="q1" value="b"> B. O(log n)<br>
+                    <input type="radio" name="q1" value="c"> C. O(n)<br>
+                    <input type="radio" name="q1" value="d"> D. O(n log n)<br>
+                    <br>
+                    <h3>Question 2:</h3>
+                    <p>What is the key requirement for binary search to work correctly?</p>
+                    <input type="radio" name="q2" value="a"> A. The array must be sorted<br>
+                    <input type="radio" name="q2" value="b"> B. The array must be unsorted<br>
+                    <input type="radio" name="q2" value="c"> C. The array must have duplicate elements<br>
+                    <input type="radio" name="q2" value="d"> D. The array must have a fixed size<br>
+                    <br>
+                    <h3>Question 3:</h3>
+                    <p>What is the basic idea behind binary search?</p>
+                    <input type="radio" name="q3" value="a"> A. Divide and conquer<br>
+                    <input type="radio" name="q3" value="b"> B. Merge and sort<br>
+                    <input type="radio" name="q3" value="c"> C. Search from left to right<br>
+                    <input type="radio" name="q3" value="d"> D. Compare adjacent elements<br>
+                    <br>
+                    <h3>Question 4:</h3>
+                    <p>In each step of binary search, the search range is:</p>
+                    <input type="radio" name="q4" value="a"> A. Halved<br>
+                    <input type="radio" name="q4" value="b"> B. Doubled<br>
+                    <input type="radio" name="q4" value="c"> C. Quadrupled<br>
+                    <input type="radio" name="q4" value="d"> D. Remains the same<br>
+                    <br>
+                    <h3>Question 5:</h3>
+                    <p>What is the worst-case time complexity of binary search?</p>
+                    <input type="radio" name="q5" value="a"> A. O(1)<br>
+                    <input type="radio" name="q5" value="b"> B. O(log n)<br>
+                    <input type="radio" name="q5" value="c"> C. O(n)<br>
+                    <input type="radio" name="q5" value="d"> D. O(n log n)<br>
+                    <br>
+                    <h3>Question 6:</h3>
+                    <p>Which data structure is commonly used to implement binary search?</p>
+                    <input type="radio" name="q6" value="a"> A. Array<br>
+                    <input type="radio" name="q6" value="b"> B. Linked List<br>
+                    <input type="radio" name="q6" value="c"> C. Stack<br>
+                    <input type="radio" name="q6" value="d"> D. Queue<br>
+                    <br>
+                    <h3>Question 7:</h3>
+                    <p>What happens if an element is not found during a binary search?</p>
+                    <input type="radio" name="q7" value="a"> A. The search returns -1<br>
+                    <input type="radio" name="q7" value="b"> B. The search returns 0<br>
+                    <input type="radio" name="q7" value="c"> C. The search returns the index of the last element<br>
+                    <input type="radio" name="q7" value="d"> D. The search returns None or null<br>
+                    <br>
+                </form>
+                <button onclick="showAnswers()">Show Answers</button>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <footer class="text-light pt-2 vlabs-footer d-flex flex-column">
+    </footer>
+    <script>
+        const correctAnswers = {
+            q1: 'b',
+            q2: 'a',
+            q3: 'a',
+            q4: 'a',
+            q5: 'b',
+            q6: 'a',
+            q7: 'd'
+        };
+
+        function showAnswers() {
+            const userAnswers = {
+                q1: document.querySelector('input[name="q1"]:checked').value,
+                q2: document.querySelector('input[name="q2"]:checked').value,
+                q3: document.querySelector('input[name="q3"]:checked').value,
+                q4: document.querySelector('input[name="q4"]:checked').value,
+                q5: document.querySelector('input[name="q5"]:checked').value,
+                q6: document.querySelector('input[name="q6"]:checked').value,
+                q7: document.querySelector('input[name="q7"]:checked').value
+            };
+
+            let result = 'Correct Answers:\n\n';
+            for (const question in correctAnswers) {
+                result += 'Question ' + question.slice(1) + ': ' + correctAnswers[question] + '\n';
+            }
+
+            let score = 0;
+            for (const question in correctAnswers) {
+                if (userAnswers[question] === correctAnswers[question]) {
+                    score++;
+                }
+            }
+
+            result += '\nYour score: ' + score + ' out of ' + Object.keys(correctAnswers).length;
+
+            alert(result);
+        }
+    </script>
+</body>
+
+</html>
